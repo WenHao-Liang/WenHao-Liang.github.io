@@ -1,5 +1,5 @@
 ---
-title: "EBPF"
+title: "eBPF"
 date: 2024-11-14T00:48:20+08:00
 ---
 
