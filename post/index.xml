@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on WenHao-Liang's Blogs</title><link>https://demo.stack.jimmycai.com/post/</link><description>Recent content in Posts on WenHao-Liang's Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Thu, 14 Nov 2024 13:57:22 +0800</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/post/index.xml" rel="self" type="application/rss+xml"/><item><title>RDMA</title><link>https://demo.stack.jimmycai.com/p/rdma/</link><pubDate>Thu, 14 Nov 2024 13:57:22 +0800</pubDate><guid>https://demo.stack.jimmycai.com/p/rdma/</guid><description>&lt;h1 id="rdma">RDMA
+&lt;/h1></description></item><item><title>eBPF</title><link>https://demo.stack.jimmycai.com/p/ebpf/</link><pubDate>Thu, 14 Nov 2024 00:48:20 +0800</pubDate><guid>https://demo.stack.jimmycai.com/p/ebpf/</guid><description>&lt;h1 id="ebpf">eBPF
+&lt;/h1>&lt;h2 id="1-ebpf概述">1. eBPF概述
+&lt;/h2>&lt;h2 id="2-ebpf程序类型">2. eBPF程序类型
+&lt;/h2>&lt;h2 id="3-ebpf开发环境搭建">3. eBPF开发环境搭建
+&lt;/h2>&lt;h2 id="4-ebpf程序编写">4. eBPF程序编写
+&lt;/h2></description></item><item><title>Cilium</title><link>https://demo.stack.jimmycai.com/p/cilium/</link><pubDate>Thu, 14 Nov 2024 00:27:10 +0800</pubDate><guid>https://demo.stack.jimmycai.com/p/cilium/</guid><description>&lt;h1 id="cilium">Cilium
+&lt;/h1></description></item><item><title>Docker</title><link>https://demo.stack.jimmycai.com/p/docker/</link><pubDate>Thu, 14 Nov 2024 00:27:10 +0800</pubDate><guid>https://demo.stack.jimmycai.com/p/docker/</guid><description>&lt;h1 id="docker">Docker
+&lt;/h1></description></item><item><title>Kubernetes</title><link>https://demo.stack.jimmycai.com/p/kubernetes/</link><pubDate>Thu, 14 Nov 2024 00:27:10 +0800</pubDate><guid>https://demo.stack.jimmycai.com/p/kubernetes/</guid><description>&lt;h1 id="kubernetes">Kubernetes
+&lt;/h1></description></item><item><title>Cloud_contents</title><link>https://demo.stack.jimmycai.com/p/cloud_contents/</link><pubDate>Thu, 14 Nov 2024 00:18:27 +0800</pubDate><guid>https://demo.stack.jimmycai.com/p/cloud_contents/</guid><description>&lt;h1 id="目录">目录
+&lt;/h1>&lt;h2 id="docker">docker
+&lt;/h2>&lt;h2 id="kubernetes">kubernetes
+&lt;/h2>&lt;h2 id="cilium">cilium
+&lt;/h2></description></item></channel></rss>
