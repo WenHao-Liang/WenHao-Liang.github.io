@@ -1,6 +1,10 @@
 // 群入口和周报适配长昵称、宽表格与手机屏幕
 .checkin-page { overflow: hidden; }
 .checkin-page .article-title { line-height: 1.5; }
+// 返回链接使用按钮外观，保留普通链接的键盘与新标签页行为
+.parent-link { display: inline-flex; align-items: center; min-height: 44px; padding: 8px 14px; border: 1px solid var(--card-separator-color); border-radius: 8px; font-size: 15px; line-height: 1.5; color: var(--accent-color); }
+.parent-link:hover { background: var(--body-background); }
+.parent-link:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 3px; }
 .checkin-page .article-content { padding-bottom: 32px; }
 .weekly-page .main-container { max-width: 1680px; }
 .weekly-page .main { min-width: 0; }

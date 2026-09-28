@@ -17,13 +17,12 @@
 在工具目录运行：
 
 ```bash
-./publish-checkins.sh group-1
-./publish-checkins.sh group-2
-./publish-checkins.sh group-2 /绝对路径/本周接龙.txt --dry-run
-./publish-checkins.sh group-1 --commit
+./publish-checkins-group-1.sh
+./publish-checkins-group-2.sh
+./publish-checkins-group-2.sh /绝对路径/本周接龙.txt --dry-run
 ```
 
-默认先生成和构建验证，再同步本周唯一页面，不提交、不推送。群二自动先提取名单再统计。重复输入不产生新文件或新提交；已收录日期减少、目标被手工修改或暂存区非空时停止。周报末尾用 text 代码块保留完整接龙原文，修正数据后应重新生成页面。
+先生成和构建验证，再同步本周唯一页面；有待提交改动时询问是否自动 commit，默认 `[y/N]`，本周内容完整时建议输入 `y`。回车或输入 `n` 保留文件但不提交，脚本不会自动推送。群二自动先提取名单再统计。重复输入不产生新文件或新提交；已收录日期减少、目标被手工修改或暂存区非空时停止。周报末尾用 text 代码块保留完整接龙原文，修正数据后应重新生成页面。
 
 ## 预览与部署
 
@@ -31,6 +30,13 @@
 hugo server
 ```
 
-首次重建和模板修改审阅后，在博客仓库手动推送 `master`。GitHub Actions 构建后发布到 `gh-pages`；仓库 Pages 应使用该分支根目录。后续每周可在工具目录运行 `./publish-checkins.sh group-1 --push` 或 `./publish-checkins.sh group-2 --push`。该选项会提交并推送，若待推送历史含非周报修改则停止。
+发布脚本结束时会打印下面的手动推送命令，不再提供 `--commit` 或 `--push` 参数。确认改动已提交后执行；未提交的文件不会上传。
+
+```bash
+cd /Volumes/forcode/codes/WenHao-Liang.github.io
+git push origin master
+```
+
+GitHub Actions 构建后发布到 `gh-pages`；仓库 Pages 应使用该分支根目录。
 
 推送成功仍需等待 Actions 部署成功才会更新线上页面。腾讯文档直接在新标签页打开，由腾讯文档处理登录和访问权限。

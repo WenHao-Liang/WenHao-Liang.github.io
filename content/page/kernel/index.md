@@ -11,5 +11,5 @@ comments: false
 ---
 
 - [kernel.org](https://www.kernel.org/)
-- [kernelgit](https://git.kernel.org/)
+- [kernelgit](https://github.com/torvalds/linux.git)
 - [kerneldocument](https://docs.kernel.org/)
