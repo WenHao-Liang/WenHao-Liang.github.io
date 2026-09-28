@@ -1,0 +1,20 @@
+{{/* 群入口自动按年份与周一日期倒序列出本群周报 */}}
+{{ define "body-class" }}article-page{{ end }}
+{{ define "main" }}
+<article class="main-article checkin-page">
+  <header class="article-header"><div class="article-details"><h1 class="article-title">{{ .Title }}</h1></div></header>
+  <section class="article-content">
+    {{ .Content }}
+    <h2>每周打卡记录</h2>
+    {{ range .RegularPagesRecursive.GroupByDate "2006" "desc" }}
+      <h3>{{ .Key }}</h3>
+      <ul class="week-list">
+        {{ range .Pages.ByDate.Reverse }}
+        <li><a href="{{ .RelPermalink }}">{{ .Date.Format "2006-01-02" }} 至 {{ (.Date.AddDate 0 0 6).Format "2006-01-02" }}</a></li>
+        {{ end }}
+      </ul>
+    {{ else }}<p>暂无周报。</p>{{ end }}
+  </section>
+</article>
+{{ partialCached "footer/footer" . }}
+{{ end }}

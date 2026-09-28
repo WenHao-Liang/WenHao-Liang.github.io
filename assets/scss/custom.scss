@@ -1,3 +1,18 @@
-/*
-    You can add your own custom styles here.
-*/
+// 群入口和周报适配长昵称、宽表格与手机屏幕
+.checkin-page { overflow: hidden; }
+.checkin-page .article-title { line-height: 1.5; }
+.checkin-page .article-content { padding-bottom: 32px; }
+.weekly-page .main-container { max-width: 1680px; }
+.weekly-page .main { min-width: 0; }
+.weekly-page .article-content table { display: block; overflow-x: auto; font-size: 15px; }
+.weekly-page .article-content th { white-space: nowrap; }
+.weekly-page .article-content td { min-width: 105px; max-width: 300px; overflow-wrap: anywhere; }
+.weekly-page .article-content pre.checkin-raw { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 1.7; }
+.weekly-toc { border-bottom: 1px solid var(--card-separator-color); padding-bottom: 12px; }
+.week-list li { margin-bottom: 12px; }
+.portal-card { border-radius: var(--card-border-radius); }
+@media (max-width: 767px) {
+  .checkin-page .article-title { font-size: 23px; }
+  .weekly-page .article-content { font-size: 16px; }
+}
+.portal-card { background: var(--card-background); box-shadow: var(--shadow-l1); }

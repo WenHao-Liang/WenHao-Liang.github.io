@@ -30,19 +30,20 @@ jobs:
 
             - uses: actions/setup-go@v5
               with:
-                  go-version: "^1.17.0"
+                  go-version: "1.27.1"
             - run: go version
 
             - name: Setup Hugo
               uses: peaceiris/actions-hugo@v2
               with:
-                  hugo-version: "latest"
+                  hugo-version: "0.166.0"
                   extended: true
 
             - name: Build
               run: hugo --minify --gc
 
             - name: Deploy 🚀
+              if: github.event_name == 'push' && github.ref == 'refs/heads/master'
               uses: JamesIves/github-pages-deploy-action@v4
               with:
                   branch: gh-pages

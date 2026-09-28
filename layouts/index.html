@@ -1,0 +1,13 @@
+{{/* 首页列出三个固定入口，不展开大篇幅接龙正文 */}}
+{{ define "main" }}
+<section class="article-list">
+{{ range slice "/group-1" "/group-2" "/page/kernel" }}
+  {{ with $.Site.GetPage . }}
+  <article class="main-article portal-card"><div class="article-details">
+    <h2 class="article-title"><a href="{{ .RelPermalink }}">{{ .Title }} <span aria-hidden="true">→</span></a></h2>
+  </div></article>
+  {{ end }}
+{{ end }}
+</section>
+{{ partialCached "footer/footer" . }}
+{{ end }}
