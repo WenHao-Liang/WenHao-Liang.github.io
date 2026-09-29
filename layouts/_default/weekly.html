@@ -12,7 +12,11 @@
     </div>
   </div></header>
   <section class="article-content">
-    <nav class="weekly-toc" aria-label="周报目录">{{ .TableOfContents }}</nav>
+    <nav class="weekly-toc" aria-labelledby="weekly-toc-title">
+      <h2 id="weekly-toc-title">0. 目录</h2>
+      {{/* 有序列表自带编号，链接文字去掉正文编号，避免重复 */}}
+      {{ .TableOfContents | replaceRE `(>)[0-9]+\. ` "$1" | safeHTML }}
+    </nav>
     {{ .Content }}
   </section>
 </article>
