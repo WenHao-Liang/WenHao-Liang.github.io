@@ -45,6 +45,8 @@ if (figures.length) {
             // Mermaid 的旋转标签仍以中点为锚点，长昵称会上穿柱体；改为尾端对齐
             image.querySelectorAll(".bottom-axis .label text").forEach(label => label.setAttribute("text-anchor", "end"));
             image.querySelectorAll(".plot text").forEach(label => label.setAttribute("font-size", "13"));
+            // 年图刻度有三位数，向左留出轴标题间距，避免与整数刻度重叠
+            image.querySelector(".left-axis .title")?.setAttribute("transform", "translate(-32, 0)");
             // 根据实际图形范围留白，防止满分柱顶数字和长昵称被默认画布裁掉
             const box = image.querySelector(".main").getBBox();
             image.setAttribute("viewBox", [box.x - 16, box.y - 24, box.width + 32, box.height + 40].join(" "));

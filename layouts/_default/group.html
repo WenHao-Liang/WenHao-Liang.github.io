@@ -8,8 +8,16 @@
   </div></header>
   <section class="article-content">
     {{ .Content }}
-    <h2>每周打卡记录</h2>
-    {{ range .RegularPagesRecursive.GroupByDate "2006" "desc" }}
+    {{ $summaryNumber := 1 }}
+    {{ if eq .Section "group-1" }}{{ $summaryNumber = 2 }}{{ end }}
+    <h2>{{ $summaryNumber }}. {{ if eq .Section "group-1" }}月度与年度打卡汇总{{ else }}月度打卡汇总{{ end }}</h2>
+    <ul class="week-list">
+      {{ range (where .RegularPagesRecursive "Params.layout" "history-summary").ByDate.Reverse }}
+      <li><a href="{{ .RelPermalink }}">{{ .Params.summary_year }}</a></li>
+      {{ else }}<li>暂无汇总。</li>{{ end }}
+    </ul>
+    <h2>{{ add $summaryNumber 1 }}. 每周打卡记录</h2>
+    {{ range (where .RegularPagesRecursive "Params.layout" "weekly").GroupByDate "2006" "desc" }}
       <h3>{{ .Key }}</h3>
       <ul class="week-list">
         {{ range .Pages.ByDate.Reverse }}

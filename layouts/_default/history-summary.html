@@ -1,0 +1,19 @@
+{{/* 月年汇总复用周报图表与宽版布局，不显示周数和周末日期摘要 */}}
+{{ define "body-class" }}article-page weekly-page{{ end }}
+{{ define "main" }}
+<article class="main-article checkin-page">
+  <header class="article-header"><div class="article-details">
+    {{ with .Site.GetPage (printf "/%s" .Params.group_id) }}<nav aria-label="上一级页面"><a class="parent-link" href="{{ .RelPermalink }}">← 返回 {{ .Title }}</a></nav>{{ end }}
+    <h1 class="article-title">{{ .Title }}</h1>
+  </div></header>
+  <section class="article-content">
+    <nav class="weekly-toc" aria-labelledby="summary-toc-title">
+      <h2 id="summary-toc-title">0. 目录</h2>
+      {{ .TableOfContents | replaceRE `(>)[0-9]+\. ` "$1" | safeHTML }}
+    </nav>
+    {{ .Content }}
+  </section>
+</article>
+{{ partial "weekly-mermaid.html" . }}
+{{ partialCached "footer/footer" . }}
+{{ end }}
