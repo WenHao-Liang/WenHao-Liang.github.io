@@ -1,0 +1,75 @@
+{{/* 周报按需渲染 Mermaid，固定版本；加载失败时保留可读源码 */}}
+<style>
+.weekly-mermaid { margin: 20px 0; }
+.weekly-chart-scroll { overflow-x: auto; overscroll-behavior-x: contain; max-width: 100%; border: 1px solid var(--card-separator-color); border-radius: 8px; }
+.weekly-chart-scroll:focus-visible { outline: 2px solid var(--accent-color); }
+.weekly-chart-scroll svg { max-width: none !important; display: block; }
+.weekly-chart-code { font-size: 13px; margin-top: 8px; }
+.weekly-chart-code pre { max-height: 240px; overflow: auto; }
+.weekly-chart-status { font-size: 14px; }
+</style>
+<script type="module">
+// 只读取专用图表容器，避免把原始接龙里的 Mermaid 文本当作代码执行
+const figures = [...document.querySelectorAll(".weekly-mermaid")];
+if (figures.length) {
+  try {
+    const {default: mermaid} = await import("https://cdn.jsdelivr.net/npm/mermaid@12.0.0/dist/mermaid.esm.min.mjs");
+    let revision = 0;
+    let pending = false;
+    let rendering = false;
+    // 串行重绘以兼容主题切换，保持滚动位置并阻止异步渲染互相覆盖
+    async function draw() {
+      if (rendering) { pending = true; return; }
+      rendering = true;
+      do {
+        pending = false;
+        const dark = document.documentElement.dataset.scheme === "dark";
+        mermaid.initialize({startOnLoad: false, securityLevel: "strict", theme: dark ? "dark" : "default"});
+        for (const [index, figure] of figures.entries()) {
+          const viewport = figure.querySelector(".weekly-chart-scroll");
+          const status = figure.querySelector(".weekly-chart-status");
+          const source = figure.querySelector("code").textContent;
+          const scroll = viewport.scrollLeft;
+          try {
+            const {svg} = await mermaid.render("weekly-chart-" + revision++ + "-" + index, source);
+            viewport.innerHTML = svg;
+            const image = viewport.querySelector("svg");
+            // 打卡按整天统计，去掉 Mermaid 自动插入的小数刻度和对应短线
+            const ticks = image.querySelectorAll(".left-axis .ticks path");
+            image.querySelectorAll(".left-axis .label text").forEach((label, index) => {
+              if (!Number.isInteger(Number(label.textContent.trim()))) {
+                label.remove();
+                ticks[index]?.remove();
+              }
+            });
+            // Mermaid 的旋转标签仍以中点为锚点，长昵称会上穿柱体；改为尾端对齐
+            image.querySelectorAll(".bottom-axis .label text").forEach(label => label.setAttribute("text-anchor", "end"));
+            image.querySelectorAll(".plot text").forEach(label => label.setAttribute("font-size", "13"));
+            // 根据实际图形范围留白，防止满分柱顶数字和长昵称被默认画布裁掉
+            const box = image.querySelector(".main").getBBox();
+            image.setAttribute("viewBox", [box.x - 16, box.y - 24, box.width + 32, box.height + 40].join(" "));
+            image.style.width = image.viewBox.baseVal.width + "px";
+            image.style.height = image.viewBox.baseVal.height + "px";
+            viewport.scrollLeft = scroll;
+            status.hidden = true;
+          } catch (error) {
+            status.textContent = "图表渲染失败，请展开源码查看数据。";
+            status.hidden = false;
+            figure.querySelector("details").open = true;
+            console.error(error);
+          }
+        }
+      } while (pending);
+      rendering = false;
+    }
+    await draw();
+    new MutationObserver(draw).observe(document.documentElement, {attributes: true, attributeFilter: ["data-scheme"]});
+  } catch (error) {
+    for (const figure of figures) {
+      figure.querySelector(".weekly-chart-status").textContent = "图表组件加载失败，请展开源码查看数据。";
+      figure.querySelector("details").open = true;
+    }
+    console.error(error);
+  }
+}
+</script>
