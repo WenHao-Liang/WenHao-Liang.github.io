@@ -12,6 +12,9 @@
 .weekly-page .article-content th { white-space: nowrap; }
 .weekly-page .article-content td { min-width: 105px; max-width: 300px; overflow-wrap: anywhere; }
 .weekly-page .article-content pre.checkin-raw { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 14px; line-height: 1.7; }
+// 日期摘要保持三行，手机上允许较长的进度行自然折行
+.weekly-date-summary { font-size: 16px; line-height: 1.7; color: var(--card-text-color-main); overflow-wrap: anywhere; }
+.weekly-date-summary p { margin: 4px 0; }
 .weekly-toc { border-bottom: 1px solid var(--card-separator-color); padding-bottom: 12px; }
 .week-list li { margin-bottom: 12px; }
 .portal-card { border-radius: var(--card-border-radius); }

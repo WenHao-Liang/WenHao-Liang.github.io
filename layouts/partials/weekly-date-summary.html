@@ -1,0 +1,22 @@
+{{/* 返回周日的三行摘要；旧周报按真实日历边界补算，不依赖构建当天 */}}
+{{ $lines := .Params.date_summary }}
+{{ if not $lines }}
+  {{ $date := time.AsTime ((.Date.AddDate 0 0 6).Format "2006-01-02") }}
+  {{ $week := .Params.iso_week | default (div (add (.Date.AddDate 0 0 3).YearDay 6) 7) }}
+  {{ $yearEnd := time.AsTime (printf "%d-12-31" $date.Year) }}
+  {{ $total := $yearEnd.YearDay }}
+  {{ $day := $date.YearDay }}
+  {{ $left := sub $total $day }}
+  {{ $quarter := add (div (sub (int $date.Month) 1) 3) 1 }}
+  {{ $month := add (mul (sub $quarter 1) 3) 1 }}
+  {{ $quarterStart := time.AsTime (printf "%d-%02d-01" $date.Year $month) }}
+  {{ $quarterEnd := $quarterStart.AddDate 0 3 -1 }}
+  {{ $quarterDay := add (div (sub $date.Unix $quarterStart.Unix) 86400) 1 }}
+  {{ $quarterLeft := div (sub $quarterEnd.Unix $date.Unix) 86400 }}
+  {{ $lines = slice
+      (printf "📅 日期: %s 周日 (第%d周)" ($date.Format "2006-01-02") (int $week))
+      (printf "⏳ 进度: 第%d天 (%.2f%%) | 剩余%d天 (%.2f%%)" $day (mul (div (float $day) (float $total)) 100.0) $left (mul (div (float $left) (float $total)) 100.0))
+      (printf "🏆 季度: 第%d季度 (第%d天, 剩余%d天)" $quarter $quarterDay $quarterLeft)
+  }}
+{{ end }}
+{{ return $lines }}

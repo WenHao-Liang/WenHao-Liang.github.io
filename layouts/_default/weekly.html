@@ -7,6 +7,9 @@
     {{/* 与群首页使用同一 ISO 周数口径，兼容尚未导出 iso_week 的历史周报 */}}
     {{ $isoWeek := .Params.iso_week | default (div (add (.Date.AddDate 0 0 3).YearDay 6) 7) }}
     <h1 class="article-title">{{ .Title }}（第{{ $isoWeek }}周）</h1>
+    <div class="weekly-date-summary" aria-label="周末日期与进度">
+      {{ range partial "weekly-date-summary.html" . }}<p>{{ . }}</p>{{ end }}
+    </div>
   </div></header>
   <section class="article-content">
     <nav class="weekly-toc" aria-label="周报目录">{{ .TableOfContents }}</nav>
