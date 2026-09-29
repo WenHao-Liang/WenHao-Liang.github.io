@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>杭州-健身-enjoy your life on WenHao-Liang's Blogs</title><link>https://WenHao-Liang.github.io/group-2/</link><description>Recent content in 杭州-健身-enjoy your life on WenHao-Liang's Blogs</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Mon, 21 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://WenHao-Liang.github.io/group-2/index.xml" rel="self" type="application/rss+xml"/><item><title>杭州-健身-enjoy your life · 2026-09-21 至 2026-09-27</title><link>https://WenHao-Liang.github.io/group-2/2026/20260921-20260927/</link><pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate><guid>https://WenHao-Liang.github.io/group-2/2026/20260921-20260927/</guid><description>&lt;p&gt;本期统计名单仅包含本周有有效打卡内容的参与者，打卡率以本期统计名单人数为分母。&lt;/p&gt;
+&lt;h2 id="本周打卡概览"&gt;1. 本周打卡概览
+&lt;/h2&gt;&lt;p&gt;&lt;span id="打卡天数排行榜"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;成员打卡天数&lt;/strong&gt;（按名单顺序展示，左右滑动查看全部成员，柱顶数字为本周打卡天数）&lt;/p&gt;
+&lt;figure class="weekly-mermaid"&gt;
+&lt;div class="weekly-chart-scroll" tabindex="0" role="region" aria-label="打卡天数柱状图，可左右滚动"&gt;&lt;/div&gt;
+&lt;p class="weekly-chart-status" role="status"&gt;正在加载柱状图…&lt;/p&gt;
+&lt;details class="weekly-chart-code"&gt;&lt;summary&gt;查看图表源码&lt;/summary&gt;&lt;pre&gt;&lt;code&gt;---
+config:
+xyChart:
+width: 2208
+height: 400
+showDataLabel: true
+showDataLabelOutsideBar: true
+xAxis:
+labelRotation: -55
+labelFontSize: 13
+yAxis:
+labelFontSize: 13
+themeVariables:
+xyChart:
+plotColorPalette: &amp;#34;#356AC3&amp;#34;
+---
+xychart-beta
+x-axis [&amp;#34;余杭-阿栗-运10&amp;#34;, &amp;#34;长兴—梨木&amp;#34;, &amp;#34;滨江阿豪-运1&amp;#34;, &amp;#34;拱墅-卧推即将100的彭于晏&amp;#34;, &amp;#34;拱墅-nini&amp;#34;, &amp;#34;诸暨-淮落&amp;#34;, &amp;#34;萧山-谢&amp;#34;, &amp;#34;西湖-陳零&amp;#34;, &amp;#34;仓前首寺-运6&amp;#34;, &amp;#34;杭州王嘉尔&amp;#34;, &amp;#34;Kepler&amp;#34;, &amp;#34;钱塘-Beyourself&amp;#34;, &amp;#34;上城区-云泽&amp;#34;, &amp;#34;Manolo&amp;#34;, &amp;#34;余杭-zz&amp;#34;, &amp;#34;下沙-阿硕-运4&amp;#34;, &amp;#34;拱墅-波涛&amp;#34;, &amp;#34;下沙-占占-运5&amp;#34;, &amp;#34;滨江-小王&amp;#34;, &amp;#34;X.&amp;#34;, &amp;#34;萧山威少-运7&amp;#34;, &amp;#34;余杭-木木&amp;#34;, &amp;#34;上城-BYG&amp;#34;, &amp;#34;仓前-首寺&amp;#34;, &amp;#34;拱墅-小六-运2&amp;#34;, &amp;#34;上城-丁桥-运4&amp;#34;, &amp;#34;长兴梨木-运3&amp;#34;, &amp;#34;Manolo-tmg&amp;#34;, &amp;#34;良渚-张敖丙（自律版）&amp;#34;, &amp;#34;西湖阿鹿-运10&amp;#34;, &amp;#34;临安-雾世-运5&amp;#34;, &amp;#34;诸暨-Ava&amp;#34;]
+y-axis &amp;#34;打卡天数&amp;#34; 0 --&amp;gt; 7
+bar [7, 2, 4, 5, 2, 6, 5, 1, 4, 2, 2, 4, 2, 2, 5, 1, 1, 5, 3, 1, 3, 2, 3, 3, 1, 1, 1, 2, 1, 1, 1, 1]&lt;/code&gt;&lt;/pre&gt;&lt;/details&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;span id="每日打卡率"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;每日打卡率&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;日期&lt;/th&gt;
+&lt;th&gt;已打卡&lt;/th&gt;
+&lt;th&gt;未打卡&lt;/th&gt;
+&lt;th&gt;打卡率&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;2026-09-21&lt;/td&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;53.1%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026-09-22&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;40.6%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026-09-23&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;40.6%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026-09-24&lt;/td&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;31.2%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026-09-25&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;34.4%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026-09-26&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;28.1%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026-09-27&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;34.4%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="打卡内容明细"&gt;2. 打卡内容明细
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名单编号&lt;/th&gt;
+&lt;th&gt;昵称&lt;/th&gt;
+&lt;th&gt;2026-09-21&lt;/th&gt;
+&lt;th&gt;2026-09-22&lt;/th&gt;
+&lt;th&gt;2026-09-23&lt;/th&gt;
+&lt;th&gt;2026-09-24&lt;/th&gt;
+&lt;th&gt;2026-09-25&lt;/th&gt;
+&lt;th&gt;2026-09-26&lt;/th&gt;
+&lt;th&gt;2026-09-27&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;余杭-阿栗-运10&lt;/td&gt;
+&lt;td&gt;背背背&lt;/td&gt;
+&lt;td&gt;肩膀头子呀&lt;br&gt;徒步20km&lt;/td&gt;
+&lt;td&gt;卷腹&lt;/td&gt;
+&lt;td&gt;有氧&lt;/td&gt;
+&lt;td&gt;有氧8km&lt;/td&gt;
+&lt;td&gt;有氧&lt;/td&gt;
+&lt;td&gt;有氧&lt;br&gt;卷腹&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;长兴—梨木&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;臀&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;滨江阿豪-运1&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;腿✅&lt;/td&gt;
+&lt;td&gt;胸&lt;/td&gt;
+&lt;td&gt;背+爬坡50min✅&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;拱墅-卧推即将100的彭于晏&lt;/td&gt;
+&lt;td&gt;有🐏➕谭🐻&lt;/td&gt;
+&lt;td&gt;肩背&lt;/td&gt;
+&lt;td&gt;休息&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;腿&lt;/td&gt;
+&lt;td&gt;胸➕腿&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;拱墅-nini&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;臀腿&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;诸暨-淮落&lt;/td&gt;
+&lt;td&gt;🐻&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;休息&lt;/td&gt;
+&lt;td&gt;胸&lt;/td&gt;
+&lt;td&gt;胸&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;背&lt;br&gt;背加练&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;萧山-谢&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;腿&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;胸&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;西湖-陳零&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;仓前首寺-运6&lt;/td&gt;
+&lt;td&gt;臀腿&lt;/td&gt;
+&lt;td&gt;休息&lt;/td&gt;
+&lt;td&gt;胸&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;杭州王嘉尔&lt;/td&gt;
+&lt;td&gt;休息&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;休息&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;Kepler&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;钱塘-Beyourself&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;胸三头&lt;/td&gt;
+&lt;td&gt;背二头&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;有氧10公里&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;上城区-云泽&lt;/td&gt;
+&lt;td&gt;屁股&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;屁股&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;Manolo&lt;/td&gt;
+&lt;td&gt;胸部肩部&lt;/td&gt;
+&lt;td&gt;🪽&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;余杭-zz&lt;/td&gt;
+&lt;td&gt;有氧&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;胸&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;有氧&lt;/td&gt;
+&lt;td&gt;有氧&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;下沙-阿硕-运4&lt;/td&gt;
+&lt;td&gt;肩腹&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;拱墅-波涛&lt;/td&gt;
+&lt;td&gt;腹&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;下沙-占占-运5&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;胸 二头 爬坡&lt;/td&gt;
+&lt;td&gt;爬楼42分钟&lt;/td&gt;
+&lt;td&gt;背 核心80分钟 爬楼20分钟&lt;/td&gt;
+&lt;td&gt;肩 背一小时 爬楼45分钟&lt;/td&gt;
+&lt;td&gt;腿一小时 爬楼25分钟&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;滨江-小王&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;胸&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;X.&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;有氧&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;萧山威少-运7&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;今天骑行267km，玩完成198km&lt;/td&gt;
+&lt;td&gt;腿，112km&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;床上运动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;余杭-木木&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;🐻&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;上城-BYG&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;腿60min爬楼40min&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;腹&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;仓前-首寺&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;休息&lt;/td&gt;
+&lt;td&gt;胸&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;拱墅-小六-运2&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;腹&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;上城-丁桥-运4&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;练腿30分钟&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;长兴梨木-运3&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;弹跳混合有氧40min&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;Manolo-tmg&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;chest back&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;游泳 ,足球&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;29&lt;/td&gt;
+&lt;td&gt;良渚-张敖丙（自律版）&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;有氧1小时&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;西湖阿鹿-运10&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;31&lt;/td&gt;
+&lt;td&gt;临安-雾世-运5&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;三头+肩&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;32&lt;/td&gt;
+&lt;td&gt;诸暨-Ava&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;有氧➕腹&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="原始打卡内容2026-09-21-至-2026-09-27"&gt;3. 原始打卡内容（2026-09-21 至 2026-09-27）
+&lt;/h2&gt;
+&lt;pre class="checkin-raw"&gt;&lt;code class="language-text"&gt;#接龙
+2026-09-21
+今天是国际和平日，愿世界温柔以待，也愿你被这世界温柔以待~
+1. 余杭-阿栗-运10 背背背
+2. 长兴—梨木 肩
+3. 滨江阿豪-运1 肩
+4. 拱墅-卧推即将100的彭于晏 有🐏➕谭🐻
+5. 拱墅-nini 背
+6. 诸暨-淮落 🐻
+7. 萧山-谢 肩
+8. 西湖-陳零 背
+9. 仓前首寺-运6 臀腿
+10. 杭州王嘉尔 休息
+11. Kepler 背
+12. 钱塘-Beyourself 肩
+13. 上城区-云泽 屁股
+14. Manolo 胸部肩部
+15. 余杭-zz 有氧
+16. 下沙-阿硕-运4 肩腹
+17. 拱墅-波涛 腹
+#接龙
+2026-09-22
+今天是2026年最后100天，愿你清零烦恼，整理当下，更新未来，遇见更好的自己！！
+1. 余杭-阿栗-运10 肩膀头子呀
+2. 长兴—梨木 臀
+3. 拱墅-nini 臀腿
+4. 拱墅-卧推即将100的彭于晏 肩背
+5. 滨江阿豪-运1 腿✅
+6. 下沙-占占-运5 胸 二头 爬坡
+7. Manolo 🪽
+8. 仓前首寺-运6 休息
+9. 诸暨-淮落 背
+10. 余杭-阿栗-运10 徒步20km
+11. 滨江-小王 背
+12. 余杭-zz 背
+13. Kepler 肩
+14. X. 有氧
+#接龙
+2026-09-23
+人间好时节，一切都刚好。今日秋分，此时秋高气爽，适合出游，愿你与美好不期而遇！
+1. 余杭-阿栗-运10 卷腹
+2. 滨江阿豪-运1 胸
+3. 下沙-占占-运5 爬楼42分钟
+4. 仓前首寺-运6 胸
+5. 萧山威少-运7 今天骑行267km，玩完成198km
+6. 余杭-zz 胸
+7. 杭州王嘉尔 休息
+8. 余杭-木木 🐻
+9. 上城区-云泽 屁股
+10. 诸暨-淮落 休息
+11. 拱墅-卧推即将100的彭于晏 休息
+12. 萧山-谢 腿
+13. 钱塘-Beyourself 胸三头
+#接龙
+2026-09-24
+生活是自己的，你选择怎样的生活，就会成就怎样的你！
+1. 余杭-阿栗-运10 有氧
+2. 滨江阿豪-运1 背&amp;#43;爬坡50min✅
+3. 下沙-占占-运5 背 核心80分钟 爬楼20分钟
+4. 诸暨-淮落 胸
+5. 钱塘-Beyourself 背二头
+6. 滨江-小王 肩
+7. 余杭-木木 肩
+8. 仓前首寺-运6 背
+9. 萧山-谢 背
+10. 萧山威少-运7 腿，112km
+#接龙
+2026-09-25
+但愿人长久，千里共婵娟。今日中秋，愿亲友岁岁平安，朝朝如愿～
+1. 余杭-阿栗-运10 有氧8km
+2. 萧山-谢 肩
+3. 上城-BYG 腿60min爬楼40min
+4. 仓前-首寺 肩
+5. 下沙-占占-运5 肩 背一小时 爬楼45分钟
+6. 诸暨-淮落 胸
+7. 拱墅-小六-运2 腹
+8. 上城-丁桥-运4 练腿30分钟
+9. 余杭-zz 有氧
+10. 长兴梨木-运3 弹跳混合有氧40min
+11. Manolo-tmg chest back
+#接龙
+2026-09-26
+所谓的一鸣惊人，都有十足的努力和付出来支撑。
+1. 余杭-阿栗-运10 有氧
+2. 上城-BYG 背
+3. 钱塘-Beyourself 有氧10公里
+4. 良渚-张敖丙（自律版） 有氧1小时
+5. 下沙-占占-运5 腿一小时 爬楼25分钟
+6. 仓前-首寺 休息
+7. 余杭-zz 有氧
+8. 滨江-小王 胸
+9. 拱墅-卧推即将100的彭于晏 腿
+#接龙
+2026-09-27
+今天是世界旅游日，忙有所得，闲有所乐，出发永远比向往更有意义。看世界，也找自己！
+1. 余杭-阿栗-运10 有氧
+2. 上城-BYG 腹
+3. Manolo-tmg 游泳 ,足球
+4. 诸暨-淮落 背
+5. 萧山威少-运7 床上运动
+6. 西湖阿鹿-运10 背
+7. 余杭-阿栗-运10 卷腹
+8. 临安-雾世-运5 三头&amp;#43;肩
+9. 萧山-谢 胸
+10. 诸暨-Ava 有氧➕腹
+11. 仓前-首寺 胸
+12. 拱墅-卧推即将100的彭于晏 胸➕腿
+13. 诸暨-淮落 背加练&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>杭州-健身-enjoy your life · 2026-09-14 至 2026-09-20</title><link>https://WenHao-Liang.github.io/group-2/2026/20260914-20260920/</link><pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate><guid>https://WenHao-Liang.github.io/group-2/2026/20260914-20260920/</guid><description>&lt;p&gt;本期统计名单仅包含本周有有效打卡内容的参与者，打卡率以本期统计名单人数为分母。&lt;/p&gt;
+&lt;h2 id="本周打卡概览"&gt;1. 本周打卡概览
+&lt;/h2&gt;&lt;p&gt;&lt;span id="打卡天数排行榜"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;成员打卡天数&lt;/strong&gt;（按名单顺序展示，左右滑动查看全部成员，柱顶数字为本周打卡天数）&lt;/p&gt;
+&lt;figure class="weekly-mermaid"&gt;
+&lt;div class="weekly-chart-scroll" tabindex="0" role="region" aria-label="打卡天数柱状图，可左右滚动"&gt;&lt;/div&gt;
+&lt;p class="weekly-chart-status" role="status"&gt;正在加载柱状图…&lt;/p&gt;
+&lt;details class="weekly-chart-code"&gt;&lt;summary&gt;查看图表源码&lt;/summary&gt;&lt;pre&gt;&lt;code&gt;---
+config:
+xyChart:
+width: 1888
+height: 400
+showDataLabel: true
+showDataLabelOutsideBar: true
+xAxis:
+labelRotation: -55
+labelFontSize: 13
+yAxis:
+labelFontSize: 13
+themeVariables:
+xyChart:
+plotColorPalette: &amp;#34;#356AC3&amp;#34;
+---
+xychart-beta
+x-axis [&amp;#34;滨江阿豪-运3&amp;#34;, &amp;#34;长兴—-大梨木&amp;#34;, &amp;#34;余杭&amp;#34;, &amp;#34;滨江-小王&amp;#34;, &amp;#34;临平-一半阳光&amp;#34;, &amp;#34;泽函&amp;#34;, &amp;#34;下沙-1206&amp;#34;, &amp;#34;诸暨-淮落&amp;#34;, &amp;#34;拱墅-nini-运3&amp;#34;, &amp;#34;上城-33&amp;#34;, &amp;#34;西湖-陳零&amp;#34;, &amp;#34;余杭-栗子&amp;#34;, &amp;#34;钱塘-Beyourself&amp;#34;, &amp;#34;拱墅-彭于晏的身材替身&amp;#34;, &amp;#34;仓前首寺-运6&amp;#34;, &amp;#34;拱墅-nini&amp;#34;, &amp;#34;Kepler&amp;#34;, &amp;#34;Manolo&amp;#34;, &amp;#34;余杭-阿栗-运10&amp;#34;, &amp;#34;萧山-谢&amp;#34;, &amp;#34;西湖阿鹿-运10&amp;#34;, &amp;#34;余杭-zz&amp;#34;, &amp;#34;下沙-阿硕-运4&amp;#34;, &amp;#34;良渚-张敖丙（自律版）&amp;#34;, &amp;#34;上城-33（新手三天）&amp;#34;, &amp;#34;银湖-Zadanni&amp;#34;, &amp;#34;上城区-云泽&amp;#34;]
+y-axis &amp;#34;打卡天数&amp;#34; 0 --&amp;gt; 7
+bar [4, 2, 1, 5, 1, 1, 2, 5, 1, 2, 2, 1, 3, 3, 4, 3, 2, 3, 3, 1, 2, 2, 1, 1, 1, 1, 1]&lt;/code&gt;&lt;/pre&gt;&lt;/details&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;span id="每日打卡率"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;每日打卡率&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;日期&lt;/th&gt;
+&lt;th&gt;已打卡&lt;/th&gt;
+&lt;th&gt;未打卡&lt;/th&gt;
+&lt;th&gt;打卡率&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;2026-09-15&lt;/td&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;40.7%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026-09-16&lt;/td&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;48.1%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026-09-17&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;33.3%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026-09-18&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;29.6%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026-09-19&lt;/td&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;18.5%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2026-09-20&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;44.4%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="打卡内容明细"&gt;2. 打卡内容明细
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名单编号&lt;/th&gt;
+&lt;th&gt;昵称&lt;/th&gt;
+&lt;th&gt;2026-09-15&lt;/th&gt;
+&lt;th&gt;2026-09-16&lt;/th&gt;
+&lt;th&gt;2026-09-17&lt;/th&gt;
+&lt;th&gt;2026-09-18&lt;/th&gt;
+&lt;th&gt;2026-09-19&lt;/th&gt;
+&lt;th&gt;2026-09-20&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;滨江阿豪-运3&lt;/td&gt;
+&lt;td&gt;背✅&lt;/td&gt;
+&lt;td&gt;肩✅&lt;/td&gt;
+&lt;td&gt;先起接龙&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;背+爬坡50min&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;长兴—-大梨木&lt;/td&gt;
+&lt;td&gt;旅行&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;肩背&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;余杭&lt;/td&gt;
+&lt;td&gt;🐟 肩背1h&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;滨江-小王&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;腿&lt;/td&gt;
+&lt;td&gt;胸&lt;/td&gt;
+&lt;td&gt;手臂&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5&lt;/td&gt;
+&lt;td&gt;临平-一半阳光&lt;/td&gt;
+&lt;td&gt;🚴🏻‍♂️三十公里&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;6&lt;/td&gt;
+&lt;td&gt;泽函&lt;/td&gt;
+&lt;td&gt;背 1.5h&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;下沙-1206&lt;/td&gt;
+&lt;td&gt;胸&lt;/td&gt;
+&lt;td&gt;爬楼30min&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;诸暨-淮落&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;肩背&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;休息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;拱墅-nini-运3&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;10&lt;/td&gt;
+&lt;td&gt;上城-33&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11&lt;/td&gt;
+&lt;td&gt;西湖-陳零&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;余杭-栗子&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;肩尖尖&lt;br&gt;刷脂 16号&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;13&lt;/td&gt;
+&lt;td&gt;钱塘-Beyourself&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;胸+三头&lt;/td&gt;
+&lt;td&gt;背+二头&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;腿&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;14&lt;/td&gt;
+&lt;td&gt;拱墅-彭于晏的身材替身&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;有氧➕🐻&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;腿&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;有🐑+背&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;15&lt;/td&gt;
+&lt;td&gt;仓前首寺-运6&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;胸&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;拱墅-nini&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;腿&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;Kepler&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;🐻&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;18&lt;/td&gt;
+&lt;td&gt;Manolo&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;🦵&lt;/td&gt;
+&lt;td&gt;xiuxi&lt;/td&gt;
+&lt;td&gt;胸部+背部&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;19&lt;/td&gt;
+&lt;td&gt;余杭-阿栗-运10&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;腹&lt;/td&gt;
+&lt;td&gt;手臂&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;熊熊🐻&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;20&lt;/td&gt;
+&lt;td&gt;萧山-谢&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;运3 肩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;21&lt;/td&gt;
+&lt;td&gt;西湖阿鹿-运10&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;肩&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;22&lt;/td&gt;
+&lt;td&gt;余杭-zz&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;胸&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;肩+手臂&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;23&lt;/td&gt;
+&lt;td&gt;下沙-阿硕-运4&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;背&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;良渚-张敖丙（自律版）&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;有氧1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;上城-33（新手三天）&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;空腹有氧&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;26&lt;/td&gt;
+&lt;td&gt;银湖-Zadanni&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;臀腿&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;27&lt;/td&gt;
+&lt;td&gt;上城区-云泽&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;屁股&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="原始打卡内容2026-09-14-至-2026-09-20"&gt;3. 原始打卡内容（2026-09-14 至 2026-09-20）
+&lt;/h2&gt;
+&lt;pre class="checkin-raw"&gt;&lt;code class="language-text"&gt;#接龙
+2026-09-15
+1. 滨江阿豪-运3
+背✅
+3. 长兴—-大梨木 旅行
+4. 余杭 🐟 肩背1h
+5. 滨江-小王 背
+6. 临平-一半阳光 🚴🏻‍♂️三十公里
+7. 泽函 背 1.5h
+8. 下沙-1206 胸
+9. 诸暨-淮落 肩
+10. 拱墅-nini-运3 肩
+11. 上城-33 肩
+12. 西湖-陳零 背
+#接龙
+2026-09-16
+1. 余杭-栗子 肩尖尖
+2. 钱塘-Beyourself 胸&amp;#43;三头
+3. 下沙-1206 爬楼30min
+4. 拱墅-彭于晏的身材替身 有氧➕🐻
+5. 滨江阿豪-运3 肩✅
+6. 仓前首寺-运6 背
+7. 拱墅-nini 腿
+8. 西湖-陳零 背
+9. 上城-33 肩
+10. Kepler 肩
+11. Manolo 🦵
+12. 诸暨-淮落 肩背
+13. 滨江-小王 腿
+14. 余杭-栗子 刷脂 16号
+#接龙
+2026-09-17
+平静 自由 坚定地主宰自己的命运
+1. 滨江阿豪-运3 先起接龙
+2. 钱塘-Beyourself 背&amp;#43;二头
+3. 余杭-阿栗-运10 腹
+7. 仓前首寺-运6 肩
+8. 萧山-谢 运3 肩
+9. 西湖阿鹿-运10 背
+10. 余杭-zz 胸
+11. 滨江-小王 胸
+12. Manolo xiuxi
+#接龙
+2026-09-18
+今天是九·一八事变纪念日，炮火虽不在，警钟仍长鸣，铭记历史，吾辈自强！
+1. 余杭-阿栗-运10 手臂
+2. 诸暨-淮落 背
+3. 拱墅-nini 背
+4. 拱墅-彭于晏的身材替身 腿
+5. 长兴—-大梨木 肩背
+7. 滨江-小王 手臂
+8. 下沙-阿硕-运4 背
+10. Manolo 胸部&amp;#43;背部
+#接龙
+2026-09-19
+1. 良渚-张敖丙（自律版） 有氧1
+2. 滨江-小王 肩
+3. 诸暨-淮落 肩
+4. 仓前首寺-运6 胸
+5. 西湖阿鹿-运10 肩
+#接龙
+2026-09-20
+脚下的每一步都是具体的、唯一的，走好脚下这一步，其实就是走好了人生这条路。
+1. 余杭-阿栗-运10 熊熊🐻
+2. 上城-33（新手三天） 空腹有氧
+3. 拱墅-nini 肩
+4. 滨江阿豪-运3 背&amp;#43;爬坡50min
+5. 拱墅-彭于晏的身材替身 有🐑&amp;#43;背
+6. 诸暨-淮落 休息
+7. 仓前首寺-运6 背
+8. Kepler 🐻
+10. 余杭-zz 肩&amp;#43;手臂
+11. 钱塘-Beyourself 腿
+12. 银湖-Zadanni 臀腿
+13. 上城区-云泽 屁股&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>2026 年月度打卡汇总</title><link>https://WenHao-Liang.github.io/group-2/summary/2026/</link><pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate><guid>https://WenHao-Liang.github.io/group-2/summary/2026/</guid><description>&lt;p&gt;根据博客已收录的周报统计；未收录日期不代表未打卡。每人每天最多计一次，按名单顺序展示。&lt;/p&gt;
+&lt;h2 id="1-2026-年-9-月"&gt;1. 2026 年 9 月
+&lt;/h2&gt;&lt;p&gt;已收录 13 天：2026-09-15 至 2026-09-27。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;成员打卡天数&lt;/strong&gt;（按名单顺序展示，左右滑动查看全部成员，柱顶数字为本月打卡天数）&lt;/p&gt;
+&lt;figure class="weekly-mermaid"&gt;
+&lt;div class="weekly-chart-scroll" tabindex="0" role="region" aria-label="打卡天数柱状图，可左右滚动"&gt;&lt;/div&gt;
+&lt;p class="weekly-chart-status" role="status"&gt;正在加载柱状图…&lt;/p&gt;
+&lt;details class="weekly-chart-code"&gt;&lt;summary&gt;查看图表源码&lt;/summary&gt;&lt;pre&gt;&lt;code&gt;---
+config:
+xyChart:
+width: 2976
+height: 400
+showDataLabel: true
+showDataLabelOutsideBar: true
+xAxis:
+labelRotation: -55
+labelFontSize: 13
+yAxis:
+labelFontSize: 13
+themeVariables:
+xyChart:
+plotColorPalette: &amp;#34;#356AC3&amp;#34;
+---
+xychart-beta
+x-axis [&amp;#34;滨江阿豪-运3&amp;#34;, &amp;#34;长兴—-大梨木&amp;#34;, &amp;#34;余杭&amp;#34;, &amp;#34;滨江-小王&amp;#34;, &amp;#34;临平-一半阳光&amp;#34;, &amp;#34;泽函&amp;#34;, &amp;#34;下沙-1206&amp;#34;, &amp;#34;诸暨-淮落&amp;#34;, &amp;#34;拱墅-nini-运3&amp;#34;, &amp;#34;上城-33&amp;#34;, &amp;#34;西湖-陳零&amp;#34;, &amp;#34;余杭-栗子&amp;#34;, &amp;#34;钱塘-Beyourself&amp;#34;, &amp;#34;拱墅-彭于晏的身材替身&amp;#34;, &amp;#34;仓前首寺-运6&amp;#34;, &amp;#34;拱墅-nini&amp;#34;, &amp;#34;Kepler&amp;#34;, &amp;#34;Manolo&amp;#34;, &amp;#34;余杭-阿栗-运10&amp;#34;, &amp;#34;萧山-谢&amp;#34;, &amp;#34;西湖阿鹿-运10&amp;#34;, &amp;#34;余杭-zz&amp;#34;, &amp;#34;下沙-阿硕-运4&amp;#34;, &amp;#34;良渚-张敖丙（自律版）&amp;#34;, &amp;#34;上城-33（新手三天）&amp;#34;, &amp;#34;银湖-Zadanni&amp;#34;, &amp;#34;上城区-云泽&amp;#34;, &amp;#34;长兴—梨木&amp;#34;, &amp;#34;滨江阿豪-运1&amp;#34;, &amp;#34;拱墅-卧推即将100的彭于晏&amp;#34;, &amp;#34;杭州王嘉尔&amp;#34;, &amp;#34;拱墅-波涛&amp;#34;, &amp;#34;下沙-占占-运5&amp;#34;, &amp;#34;X.&amp;#34;, &amp;#34;萧山威少-运7&amp;#34;, &amp;#34;余杭-木木&amp;#34;, &amp;#34;上城-BYG&amp;#34;, &amp;#34;仓前-首寺&amp;#34;, &amp;#34;拱墅-小六-运2&amp;#34;, &amp;#34;上城-丁桥-运4&amp;#34;, &amp;#34;长兴梨木-运3&amp;#34;, &amp;#34;Manolo-tmg&amp;#34;, &amp;#34;临安-雾世-运5&amp;#34;, &amp;#34;诸暨-Ava&amp;#34;]
+y-axis &amp;#34;打卡天数&amp;#34; 0 --&amp;gt; 30
+bar [4, 2, 1, 8, 1, 1, 2, 11, 1, 2, 3, 1, 7, 3, 8, 5, 4, 5, 10, 6, 3, 7, 2, 2, 1, 1, 3, 2, 4, 5, 2, 1, 5, 1, 3, 2, 3, 3, 1, 1, 1, 2, 1, 1]&lt;/code&gt;&lt;/pre&gt;&lt;/details&gt;
+&lt;/figure&gt;</description></item></channel></rss>
