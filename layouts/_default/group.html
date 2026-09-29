@@ -13,7 +13,9 @@
       <h3>{{ .Key }}</h3>
       <ul class="week-list">
         {{ range .Pages.ByDate.Reverse }}
-        <li><a href="{{ .RelPermalink }}">{{ .Date.Format "2006-01-02" }} 至 {{ (.Date.AddDate 0 0 6).Format "2006-01-02" }}</a></li>
+        {{/* 历史周报没有 iso_week 时，用本周周四的年内天数计算 ISO 周数，兼容跨年 */}}
+        {{ $isoWeek := .Params.iso_week | default (div (add (.Date.AddDate 0 0 3).YearDay 6) 7) }}
+        <li><a href="{{ .RelPermalink }}">{{ .Date.Format "2006-01-02" }} 至 {{ (.Date.AddDate 0 0 6).Format "2006-01-02" }}</a>（第{{ $isoWeek }}周）</li>
         {{ end }}
       </ul>
     {{ else }}<p>暂无周报。</p>{{ end }}
