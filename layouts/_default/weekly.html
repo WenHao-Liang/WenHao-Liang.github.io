@@ -2,7 +2,7 @@
 {{ define "body-class" }}article-page weekly-page{{ end }}
 {{ define "main" }}
 <article class="main-article checkin-page">
-  <header class="article-header"><div class="article-details">
+  <header id="article-top" class="article-header"><div class="article-details">
     {{ with .Site.GetPage (printf "/%s" .Params.group_id) }}<nav aria-label="上一级页面"><a class="parent-link" href="{{ .RelPermalink }}">← 返回 {{ .Title }}</a></nav>{{ end }}
     {{/* 与群首页使用同一 ISO 周数口径，兼容尚未导出 iso_week 的历史周报 */}}
     {{ $isoWeek := .Params.iso_week | default (div (add (.Date.AddDate 0 0 3).YearDay 6) 7) }}
@@ -22,6 +22,7 @@
   </section>
   {{ partial "week-navigation.html" . }}
 </article>
+{{ partial "reading-shortcuts.html" "weekly-toc-title" }}
 {{ partial "weekly-mermaid.html" . }}
 {{ partialCached "footer/footer" . }}
 {{ end }}

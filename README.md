@@ -12,6 +12,8 @@
 
 周报底部提供本群的“上一周／下一周”链接，按已收录周报的日期衔接，支持跨年；最早、最新及只有一个周报时省略不存在的链接，无需生成工具维护。
 
+周报及月年汇总右下角提供“顶部／目录”入口，使用普通页面锚点，禁用 JavaScript 时仍可跳转，手机和深色模式沿用主题样式。
+
 ## 生成周报
 
 工具位于相邻仓库的 [Record_study_check-ins](../Talk_is_cheap_Show_me_the_code/language_go/src/Record_study_check-ins/README.md)，默认博客路径为 `/Volumes/forcode/codes/WenHao-Liang.github.io`。
