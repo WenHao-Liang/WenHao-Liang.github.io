@@ -14,6 +14,8 @@
 
 周报及月年汇总右下角提供“顶部／目录”入口，使用普通页面锚点，禁用 JavaScript 时仍可跳转，手机和深色模式沿用主题样式。
 
+周报末尾的原始接龙默认折叠，展开后可“复制原文”，保留空格、空行与末尾换行。浏览器拒绝剪贴板访问时选中原文并提示手动复制；禁用 JavaScript 时仍可展开阅读，不显示复制按钮。功能只改变网页展示，无需修改原始 Markdown 或统计工具。
+
 ## 生成周报
 
 工具位于相邻仓库的 [Record_study_check-ins](../Talk_is_cheap_Show_me_the_code/language_go/src/Record_study_check-ins/README.md)，默认博客路径为 `/Volumes/forcode/codes/WenHao-Liang.github.io`。
@@ -53,8 +55,8 @@ GitHub Actions 构建后发布到 `gh-pages`；仓库 Pages 应使用该分支�
 
 计数保存在外部服务中，不写入 Markdown 或 Git；重新生成同一 URL 的周报无需重置计数。统计从接入后开始，服务按自身口径计算访客数，网络限制或浏览器拦截可能导致漏计。
 
-统计加载脚本的离线测试：
+统计加载与原文复制脚本的离线测试：
 
 ```bash
-node --test tests/visit-statistics.test.cjs
+node --test tests/*.test.cjs
 ```

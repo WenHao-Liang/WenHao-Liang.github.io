@@ -1,2 +1,21 @@
-{{/* 原始接龙只做 HTML 转义，不添加行号、语法高亮或额外处理 */}}
+{{/* 周报原始接龙默认折叠；仅转义展示，代码文本不做裁剪或重排 */}}
+{{ if eq .Page.Params.layout "weekly" }}
+{{/* 生成周报仅有一段 text 原文，从 RawContent 取回 Hugo Inner 裁剪的末尾空行；围栏长度由生成工具决定 */}}
+{{ $raw := .Inner }}
+{{ with findRE "(?m)^`{3,}text$" .Page.RawContent 1 }}
+  {{ $fence := strings.TrimSuffix "text" (index . 0) }}
+  {{ with findRESubmatch (printf "(?ms)^%stext\n(.*?)^%s$" $fence $fence) $.Page.RawContent 1 }}
+    {{ $raw = index (index . 0) 1 }}
+  {{ end }}
+{{ end }}
+<details class="checkin-raw-details">
+  <summary>展开／收起原始接龙文本</summary>
+  <div class="raw-actions">
+    <button type="button" class="raw-copy-button" data-copy-raw hidden>复制原文</button>
+    <span class="raw-copy-status" role="status" aria-live="polite"></span>
+  </div>
+  <pre class="checkin-raw"><code class="language-text">{{ $raw }}</code></pre>
+</details>
+{{ else }}
 <pre class="checkin-raw"><code class="language-text">{{ .Inner }}</code></pre>
+{{ end }}

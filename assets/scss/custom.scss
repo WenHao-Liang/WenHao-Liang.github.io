@@ -42,3 +42,13 @@
 @media (max-width: 767px) {
   .reading-shortcuts { right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); }
 }
+// 原始接龙默认收起，复制按钮仅在脚本准备好后显示
+.checkin-raw-details { margin: 16px 0; border: 1px solid var(--card-separator-color); border-radius: 8px; }
+.checkin-raw-details > summary { cursor: pointer; padding: 12px 16px; color: var(--accent-color); }
+.checkin-raw-details > summary:focus-visible, .raw-copy-button:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; }
+.raw-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; padding: 0 16px; }
+.raw-copy-button { min-height: 44px; padding: 8px 14px; border: 1px solid var(--card-separator-color); border-radius: 8px; background: var(--card-background); color: var(--accent-color); font: inherit; font-size: 14px; cursor: pointer; }
+.raw-copy-button[hidden] { display: none; }
+.raw-copy-button:disabled { opacity: .6; cursor: wait; }
+.raw-copy-status { font-size: 14px; color: var(--card-text-color-secondary); }
+.checkin-page .article-content .checkin-raw-details pre.checkin-raw { margin: 12px 0 0; padding: 16px; width: 100%; border-radius: 0 0 8px 8px; }

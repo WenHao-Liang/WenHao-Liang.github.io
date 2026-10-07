@@ -1,4 +1,8 @@
-{{/* 通过主题扩展入口加载统计，开发构建与 hugo server 不输出脚本 */}}
+{{/* 通过主题扩展入口加载周报复制功能与统计；统计仅在生产环境启用 */}}
+{{ if eq .Params.layout "weekly" }}
+  {{ $copyRaw := resources.Get "js/copy-checkin-raw.js" | minify | fingerprint }}
+  <script defer src="{{ $copyRaw.RelPermalink }}" integrity="{{ $copyRaw.Data.Integrity }}"></script>
+{{ end }}
 {{ if and .Site.Params.analytics.busuanzi (not hugo.IsServer) hugo.IsProduction }}
   {{ $statistics := resources.Get "js/visit-statistics.js" | minify | fingerprint }}
   <script defer src="{{ $statistics.RelPermalink }}" integrity="{{ $statistics.Data.Integrity }}" data-site-url="{{ .Site.BaseURL }}"></script>
