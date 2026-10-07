@@ -10,6 +10,8 @@
 
 周报保存在 `content/group-N/年份/YYYYMMDD-YYYYMMDD.md`，每群每周一个文件。年份取周一所在年份，日期来自接龙正文。群入口由模板自动按年份、周次倒序列出，无需手动添加链接。
 
+周报底部提供本群的“上一周／下一周”链接，按已收录周报的日期衔接，支持跨年；最早、最新及只有一个周报时省略不存在的链接，无需生成工具维护。
+
 ## 生成周报
 
 工具位于相邻仓库的 [Record_study_check-ins](../Talk_is_cheap_Show_me_the_code/language_go/src/Record_study_check-ins/README.md)，默认博客路径为 `/Volumes/forcode/codes/WenHao-Liang.github.io`。

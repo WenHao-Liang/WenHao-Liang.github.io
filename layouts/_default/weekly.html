@@ -20,6 +20,7 @@
     </nav>
     {{ .Content }}
   </section>
+  {{ partial "week-navigation.html" . }}
 </article>
 {{ partial "weekly-mermaid.html" . }}
 {{ partialCached "footer/footer" . }}

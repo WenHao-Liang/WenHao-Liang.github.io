@@ -28,3 +28,8 @@
 .visit-statistics { display: flex; flex-wrap: wrap; gap: 0 6px; font-size: 14px; line-height: 1.7; color: var(--card-text-color-secondary); }
 .site-footer .visit-statistics { margin-bottom: 8px; }
 .article-visits { margin: 8px 0; }
+// 周报导航按时间衔接，手机上允许两个链接自然换行
+.week-navigation { display: flex; flex-wrap: wrap; gap: 12px; padding: 0 var(--card-padding) var(--card-padding); }
+.week-navigation .parent-link { flex: 1 1 240px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.week-navigation [rel="next"] { align-items: flex-end; text-align: right; margin-left: auto; }
+.week-navigation small { color: var(--card-text-color-secondary); font-size: 13px; }

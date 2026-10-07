@@ -1,0 +1,17 @@
+{{/* 从本群全部已发布周报按日期找相邻页面，跨年衔接并省略首尾不存在的链接 */}}
+{{ $page := . }}
+{{ $weeks := (where (where .Site.RegularPages "Params.group_id" .Params.group_id) "Params.layout" "weekly").ByDate }}
+{{ $previous := false }}
+{{ $next := false }}
+{{ range $index, $week := $weeks }}
+  {{ if eq $week.RelPermalink $page.RelPermalink }}
+    {{ if gt $index 0 }}{{ $previous = index $weeks (sub $index 1) }}{{ end }}
+    {{ if lt (add $index 1) (len $weeks) }}{{ $next = index $weeks (add $index 1) }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ if or $previous $next }}
+<nav class="week-navigation" aria-label="相邻周报">
+  {{ with $previous }}<a class="parent-link" rel="prev" href="{{ .RelPermalink }}"><span>← 上一周</span><small>{{ .Date.Format "2006-01-02" }} 至 {{ (.Date.AddDate 0 0 6).Format "2006-01-02" }}</small></a>{{ end }}
+  {{ with $next }}<a class="parent-link" rel="next" href="{{ .RelPermalink }}"><span>下一周 →</span><small>{{ .Date.Format "2006-01-02" }} 至 {{ (.Date.AddDate 0 0 6).Format "2006-01-02" }}</small></a>{{ end }}
+</nav>
+{{ end }}
