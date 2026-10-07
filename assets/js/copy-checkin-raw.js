@@ -1,4 +1,4 @@
-// 为周报原始接龙添加复制入口，保留代码文本；浏览器拒绝时选中原文供手动复制
+// 为周打卡原始接龙添加复制入口，保留代码文本；浏览器拒绝时选中原文供手动复制
 (function setupRawCopy() {
     document.querySelectorAll('.checkin-raw-details').forEach((wrapper) => {
         const button = wrapper.querySelector('[data-copy-raw]');

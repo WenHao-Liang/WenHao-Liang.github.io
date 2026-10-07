@@ -1,6 +1,6 @@
-{{/* 周报原始接龙默认折叠；仅转义展示，代码文本不做裁剪或重排 */}}
+{{/* 周打卡原始接龙默认折叠；仅转义展示，代码文本不做裁剪或重排 */}}
 {{ if eq .Page.Params.layout "weekly" }}
-{{/* 生成周报仅有一段 text 原文，从 RawContent 取回 Hugo Inner 裁剪的末尾空行；围栏长度由生成工具决定 */}}
+{{/* 生成周打卡仅有一段 text 原文，从 RawContent 取回 Hugo Inner 裁剪的末尾空行；围栏长度由生成工具决定 */}}
 {{ $raw := .Inner }}
 {{ with findRE "(?m)^`{3,}text$" .Page.RawContent 1 }}
   {{ $fence := strings.TrimSuffix "text" (index . 0) }}

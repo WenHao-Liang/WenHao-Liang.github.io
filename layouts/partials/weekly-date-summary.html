@@ -1,4 +1,4 @@
-{{/* 统一按周报日期生成周报、季度、年度摘要，避免旧元数据保留过时样式 */}}
+{{/* 统一按周打卡日期生成周打卡、季度、年度摘要，避免旧元数据保留过时样式 */}}
 {{ $date := time.AsTime ((.Date.AddDate 0 0 6).Format "2006-01-02") }}
 {{ $week := .Params.iso_week | default (div (add (.Date.AddDate 0 0 3).YearDay 6) 7) }}
 {{ $yearEnd := time.AsTime (printf "%d-12-31" $date.Year) }}
@@ -12,7 +12,7 @@
 {{ $quarterDay := add (div (sub $date.Unix $quarterStart.Unix) 86400) 1 }}
 {{ $quarterLeft := div (sub $quarterEnd.Unix $date.Unix) 86400 }}
 {{ $lines := slice
-    (printf "📅 周报：%s 至 %s（第%d周）" (.Date.Format "2006-01-02") ($date.Format "2006-01-02") (int $week))
+    (printf "📅 周打卡：%s 至 %s（第%d周）" (.Date.Format "2006-01-02") ($date.Format "2006-01-02") (int $week))
     (printf "🏆 季度：%d年第%d季度｜已过%d天，剩余%d天" $date.Year $quarter $quarterDay $quarterLeft)
     (printf "⏳ 年度：%d年｜已过%d天（%.2f%%），剩余%d天（%.2f%%）" $date.Year $day (mul (div (float $day) (float $total)) 100.0) $left (mul (div (float $left) (float $total)) 100.0))
 }}

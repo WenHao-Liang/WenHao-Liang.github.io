@@ -1,4 +1,4 @@
-{{/* 页脚统计全站，周报与汇总标题下统计单页；只输出正式构建所需占位，不保存访问数据 */}}
+{{/* 页脚统计全站，周打卡与汇总标题下统计单页；只输出正式构建所需占位，不保存访问数据 */}}
 {{ if and .page.Site.Params.analytics.busuanzi (not hugo.IsServer) hugo.IsProduction }}
   {{ if eq .kind "site" }}
     <section class="visit-statistics" data-visit-statistics hidden aria-label="全站访问统计">

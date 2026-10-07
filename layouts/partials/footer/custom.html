@@ -1,4 +1,4 @@
-{{/* 通过主题扩展入口加载周报复制功能与统计；统计仅在生产环境启用 */}}
+{{/* 通过主题扩展入口加载周打卡复制功能与统计；统计仅在生产环境启用 */}}
 {{ if eq .Params.layout "weekly" }}
   {{ $copyRaw := resources.Get "js/copy-checkin-raw.js" | minify | fingerprint }}
   <script defer src="{{ $copyRaw.RelPermalink }}" integrity="{{ $copyRaw.Data.Integrity }}"></script>

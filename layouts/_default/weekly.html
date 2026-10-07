@@ -1,10 +1,10 @@
-{{/* 周报使用宽版单栏，标题只出现一次，表格可横向滚动 */}}
+{{/* 周打卡使用宽版单栏，标题只出现一次，表格可横向滚动 */}}
 {{ define "body-class" }}article-page weekly-page{{ end }}
 {{ define "main" }}
 <article class="main-article checkin-page">
   <header id="article-top" class="article-header"><div class="article-details">
     {{ with .Site.GetPage (printf "/%s" .Params.group_id) }}<nav aria-label="上一级页面"><a class="parent-link" href="{{ .RelPermalink }}">← 返回 {{ .Title }}</a></nav>{{ end }}
-    {{/* 与群首页使用同一 ISO 周数口径，兼容尚未导出 iso_week 的历史周报 */}}
+    {{/* 与群首页使用同一 ISO 周数口径，兼容尚未导出 iso_week 的历史周打卡 */}}
     {{ $isoWeek := .Params.iso_week | default (div (add (.Date.AddDate 0 0 3).YearDay 6) 7) }}
     <h1 class="article-title">{{ .Title }}（第{{ $isoWeek }}周）</h1>
     {{ partial "visit-statistics.html" (dict "page" . "kind" "page") }}
