@@ -1,0 +1,16 @@
+{{/* 时间归档收录普通 post 和显式 archive 页面；群入口可收录，打卡子页面及功能页面始终排除 */}}
+{{ $posts := where .Site.RegularPages "Section" "post" }}
+{{ $explicit := where .Site.Pages "Params.archive" true }}
+{{ $pages := union $posts $explicit }}
+{{ $pages = where $pages "Params.hidden" "!=" true }}
+{{/* 归档依赖稳定发布日期，缺失时明确报错，避免出现零年或随子页面更新漂移 */}}
+{{ range $pages }}
+  {{/* 普通文章可不写 layout 或 archive；只按明确的排除条件过滤 */}}
+  {{ $excludedLayout := in (slice "weekly" "history-summary" "archives" "search" "links") (.Params.layout | default "") }}
+  {{ if or $excludedLayout (and (isset .Params "archive") (eq .Params.archive false)) }}
+    {{ $pages = $pages | complement (slice .) }}
+  {{ else if .Date.IsZero }}
+    {{ errorf "归档页面 %s 缺少 date 发布日期" .RelPermalink }}
+  {{ end }}
+{{ end }}
+{{ return $pages }}

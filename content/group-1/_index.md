@@ -1,11 +1,10 @@
 ---
 title: "长期主义交流打卡搭子"
 layout: group
-menu:
-  main:
-    weight: 2
-    params:
-      icon: archives
+date: 2026-09-28T23:29:12+08:00
+collection: true
+archive: true
+weight: 10
 ---
 
 ## 1. 腾讯文档

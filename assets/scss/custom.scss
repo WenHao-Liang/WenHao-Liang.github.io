@@ -23,6 +23,16 @@
   .weekly-page .article-content { font-size: 16px; }
 }
 .portal-card { background: var(--card-background); box-shadow: var(--shadow-l1); }
+// 文集与归档沿用主题颜色，长标题在手机上自然换行
+.portal-heading h1 { margin: 0 0 24px; color: var(--card-text-color-main); font-size: 28px; }
+.publication-dates { margin: 8px 0 0; font-size: 14px; color: var(--card-text-color-secondary); }
+.archive-content .archive-list { list-style: none; padding: 0; }
+.archive-list li { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; }
+.archive-list time { flex-shrink: 0; font-size: 14px; color: var(--card-text-color-secondary); }
+.archive-list a { overflow-wrap: anywhere; }
+@media (max-width: 767px) {
+  .archive-list li { flex-direction: column; gap: 4px; }
+}
 // 统计数字返回前保持隐藏，兼容第三方脚本修改内层容器的 display
 [data-visit-statistics][hidden] { display: none !important; }
 .visit-statistics { display: flex; flex-wrap: wrap; gap: 0 6px; font-size: 14px; line-height: 1.7; color: var(--card-text-color-secondary); }

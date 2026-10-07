@@ -1,8 +1,9 @@
 ---
+title: 文集分类
 menu:
     main:
-        name: Home
+        name: 文集分类
         weight: 1
         params:
-            icon: home
+            icon: categories
 ---

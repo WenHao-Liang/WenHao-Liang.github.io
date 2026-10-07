@@ -3,8 +3,9 @@
 {{ define "main" }}
 <article class="main-article checkin-page">
   <header class="article-header"><div class="article-details">
-    <nav aria-label="上一级页面"><a class="parent-link" href="{{ .Site.Home.RelPermalink }}">← 返回博客首页</a></nav>
+    <nav aria-label="上一级页面"><a class="parent-link" href="{{ .Site.Home.RelPermalink }}">← 返回文集分类</a></nav>
     <h1 class="article-title">{{ .Title }}</h1>
+    {{ partial "publication-dates.html" . }}
   </div></header>
   <section class="article-content">
     {{ .Content }}

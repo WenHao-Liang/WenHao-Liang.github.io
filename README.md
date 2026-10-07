@@ -1,12 +1,18 @@
 # 博客与群打卡历史
 
-使用 Hugo extended 和 Stack 主题，首页提供两个群的打卡历史与 kernel 链接。
+使用 Hugo extended 和 Stack 主题，主页展示文集分类，侧边栏只保留“文集分类”和“时间归档”两个入口。
 
 ## 内容目录
 
 - [长期主义交流打卡搭子](content/group-1/_index.md)：周打卡及 2026、2025、2024 年腾讯文档链接
 - [杭州-健身-enjoy your life](content/group-2/_index.md)：周打卡，只统计本周实际打卡成员
 - [kernel](content/page/kernel/index.md)：内核官网、源码和文档链接
+
+主页自动列出带 `collection: true` 的页面，按 `weight` 排列。新增文集时在入口 Markdown 添加这两个字段即可，无需修改侧边栏或首页模板。
+
+[时间归档](content/page/archives/index.md) 按 `date` 发布日期倒序分年分月，收录 `content/post/` 下的普通文章及显式设置 `archive: true` 的页面；`archive: false` 或 `hidden: true` 可以排除页面。两个群主页面与 kernel 的创建时间来自 Git 提交 `466e373`，固定为 2026-09-28；不取最早打卡日期，也不随新增周打卡改变归档位置。
+
+每周打卡、月度及年度汇总、搜索与归档等功能页面不进入时间归档，即使误设 `archive: true` 也会排除。归档页面必须提供 `date`；修改内容时可以单独更新 `lastmod`，它只用于展示更新时间，不改变归档位置。群主页面与 kernel 的返回按钮指向文集分类。
 
 周打卡保存在 `content/group-N/年份/YYYYMMDD-YYYYMMDD.md`，每群每周一个文件。年份取周一所在年份，日期来自接龙正文。群入口由模板自动按年份、周次倒序列出，无需手动添加链接。
 

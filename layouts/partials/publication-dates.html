@@ -1,0 +1,4 @@
+{{/* 群入口和资源页展示固定发布日期；只有 lastmod 晚于 date 才显示更新日期，不影响归档 */}}
+{{ if not .Date.IsZero }}
+<p class="publication-dates">发布：<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>{{ if gt .Lastmod.Unix .Date.Unix }} · 更新：<time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>{{ end }}</p>
+{{ end }}

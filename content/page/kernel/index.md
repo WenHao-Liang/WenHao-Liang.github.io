@@ -2,11 +2,10 @@
 title: kernel
 slug: kernel
 layout: simple
-menu:
-  main:
-    weight: 4
-    params:
-      icon: link
+date: 2026-09-28T23:29:12+08:00
+collection: true
+archive: true
+weight: 30
 comments: false
 ---
 

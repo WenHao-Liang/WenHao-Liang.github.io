@@ -1,12 +1,13 @@
-{{/* 首页列出三个固定入口，不展开大篇幅接龙正文 */}}
+{{/* 主页按权重自动列出 collection 文集，不展开文章或打卡子页面 */}}
 {{ define "main" }}
+<header class="portal-heading"><h1>{{ .Title }}</h1></header>
 <section class="article-list">
-{{ range slice "/group-1" "/group-2" "/page/kernel" }}
-  {{ with $.Site.GetPage . }}
+{{ range (where (where .Site.Pages "Params.collection" true) "Params.hidden" "!=" true).ByWeight }}
   <article class="main-article portal-card"><div class="article-details">
     <h2 class="article-title"><a href="{{ .RelPermalink }}">{{ .Title }} <span aria-hidden="true">→</span></a></h2>
   </div></article>
-  {{ end }}
+{{ else }}
+  <p>暂无文集。</p>
 {{ end }}
 </section>
 {{ partialCached "footer/footer" . }}
