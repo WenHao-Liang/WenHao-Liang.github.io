@@ -23,3 +23,8 @@
   .weekly-page .article-content { font-size: 16px; }
 }
 .portal-card { background: var(--card-background); box-shadow: var(--shadow-l1); }
+// 统计数字返回前保持隐藏，兼容第三方脚本修改内层容器的 display
+[data-visit-statistics][hidden] { display: none !important; }
+.visit-statistics { display: flex; flex-wrap: wrap; gap: 0 6px; font-size: 14px; line-height: 1.7; color: var(--card-text-color-secondary); }
+.site-footer .visit-statistics { margin-bottom: 8px; }
+.article-visits { margin: 8px 0; }

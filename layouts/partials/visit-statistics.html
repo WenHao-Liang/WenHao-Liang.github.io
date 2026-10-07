@@ -1,0 +1,14 @@
+{{/* 页脚统计全站，周报与汇总标题下统计单页；只输出正式构建所需占位，不保存访问数据 */}}
+{{ if and .page.Site.Params.analytics.busuanzi (not hugo.IsServer) hugo.IsProduction }}
+  {{ if eq .kind "site" }}
+    <section class="visit-statistics" data-visit-statistics hidden aria-label="全站访问统计">
+      <span id="busuanzi_container_site_pv">总访问量 <span id="busuanzi_value_site_pv"></span> 次</span>
+      <span aria-hidden="true">·</span>
+      <span id="busuanzi_container_site_uv">总访客数 <span id="busuanzi_value_site_uv"></span></span>
+    </section>
+  {{ else }}
+    <p class="visit-statistics article-visits" data-visit-statistics hidden aria-label="页面阅读量">
+      <span id="busuanzi_container_page_pv">阅读 <span id="busuanzi_value_page_pv"></span> 次</span>
+    </p>
+  {{ end }}
+{{ end }}

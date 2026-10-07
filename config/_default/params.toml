@@ -8,6 +8,10 @@ favicon = "/favicon.png"
 since = 2020
 customText = ""
 
+[analytics]
+# 生产构建在正式域名启用不蒜子，本地预览不计数
+busuanzi = true
+
 [dateFormat]
 published = "2006-01-02"
 lastUpdated = "2006-01-02 15:04 UTC"

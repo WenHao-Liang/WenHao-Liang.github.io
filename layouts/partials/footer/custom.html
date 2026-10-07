@@ -1,0 +1,5 @@
+{{/* 通过主题扩展入口加载统计，开发构建与 hugo server 不输出脚本 */}}
+{{ if and .Site.Params.analytics.busuanzi (not hugo.IsServer) hugo.IsProduction }}
+  {{ $statistics := resources.Get "js/visit-statistics.js" | minify | fingerprint }}
+  <script defer src="{{ $statistics.RelPermalink }}" integrity="{{ $statistics.Data.Integrity }}" data-site-url="{{ .Site.BaseURL }}"></script>
+{{ end }}

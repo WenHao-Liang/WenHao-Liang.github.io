@@ -40,3 +40,17 @@ git push origin master
 GitHub Actions 构建后发布到 `gh-pages`；仓库 Pages 应使用该分支根目录。
 
 推送成功仍需等待 Actions 部署成功才会更新线上页面。腾讯文档直接在新标签页打开，由腾讯文档处理登录和访问权限。
+
+## 访问统计
+
+使用[不蒜子](https://busuanzi.ibruce.info/)统计访问。全站页脚显示累计访问量和访客数，周报及月年汇总在标题下显示本页阅读量；数字加载失败或尚未返回时隐藏统计区域。
+
+仅生产构建在 `baseurl` 对应的 HTTPS 域名加载统计服务。`hugo server`、开发构建，以及使用本地地址打开的生产文件都不会请求统计服务。需要关闭时，将 [params.toml](config/_default/params.toml) 的 `analytics.busuanzi` 设置为 `false`。
+
+计数保存在外部服务中，不写入 Markdown 或 Git；重新生成同一 URL 的周报无需重置计数。统计从接入后开始，服务按自身口径计算访客数，网络限制或浏览器拦截可能导致漏计。
+
+统计加载脚本的离线测试：
+
+```bash
+node --test tests/visit-statistics.test.cjs
+```
