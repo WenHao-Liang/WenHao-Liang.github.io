@@ -1,5 +1,11 @@
-{{/* 长页使用普通锚点返回标题或目录，无需 JavaScript，键盘与手机均可操作 */}}
-<nav class="reading-shortcuts" aria-label="阅读快捷导航">
-  <a href="#article-top">↑ 顶部</a>
-  <a href="#{{ . }}">☰ 目录</a>
+{{/* 桌面侧边栏与手机浮动按钮共用本页锚点，无需 JavaScript */}}
+{{ $navigation := partial "reading-navigation.html" .page }}
+{{ if $navigation.enabled }}
+{{ $desktop := eq .placement "sidebar" }}
+<nav class="{{ if $desktop }}sidebar-reading{{ else }}reading-shortcuts{{ end }}" aria-label="{{ if $desktop }}当前页面阅读导航{{ else }}手机阅读导航{{ end }}">
+  {{ if $desktop }}<p class="reading-navigation-title">当前页面</p>{{ end }}
+  <a href="#article-top">↑ {{ if $desktop }}文章顶部{{ else }}顶部{{ end }}</a>
+  {{ with $navigation.toc }}<a href="#{{ . }}">☰ {{ if $desktop }}文章目录{{ else }}目录{{ end }}</a>{{ end }}
+  <a href="#article-bottom">↓ {{ if $desktop }}文章底部{{ else }}底部{{ end }}</a>
 </nav>
+{{ end }}

@@ -14,8 +14,8 @@
     </nav>
     {{ .Content }}
   </section>
+  <div id="article-bottom"></div>
 </article>
-{{ partial "reading-shortcuts.html" "summary-toc-title" }}
 {{ partial "weekly-mermaid.html" . }}
 {{ partialCached "footer/footer" . }}
 {{ end }}

@@ -43,14 +43,20 @@
 .week-navigation .parent-link { flex: 1 1 240px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
 .week-navigation [rel="next"] { align-items: flex-end; text-align: right; margin-left: auto; }
 .week-navigation small { color: var(--card-text-color-secondary); font-size: 13px; }
-// 两个快捷入口固定在右下角，原生锚点在禁用脚本时仍然有效
-.reading-shortcuts { position: fixed; right: 20px; bottom: calc(20px + env(safe-area-inset-bottom)); z-index: 10; display: flex; border: 1px solid var(--card-separator-color); border-radius: 8px; background: var(--card-background); box-shadow: var(--shadow-l1); }
+// 桌面阅读导航放在主菜单下，手机只显示右下角竖排按钮，断点与主题侧边栏一致
+.sidebar-reading { display: flex; flex-direction: column; gap: 4px; padding-top: 16px; border-top: 1px solid var(--card-separator-color); }
+.reading-navigation-title { margin: 0 0 8px; font-size: 13px; color: var(--body-text-color); }
+.sidebar-reading a { min-height: 44px; display: flex; align-items: center; font-size: 14px; color: var(--body-text-color); }
+.sidebar-reading a:hover { color: var(--accent-color); }
+.sidebar-reading a:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; }
+.reading-shortcuts { position: fixed; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 10; display: none; flex-direction: column; border: 1px solid var(--card-separator-color); border-radius: 8px; background: var(--card-background); box-shadow: var(--shadow-l1); }
 .reading-shortcuts a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 12px; font-size: 14px; color: var(--accent-color); }
-.reading-shortcuts a + a { border-left: 1px solid var(--card-separator-color); }
+.reading-shortcuts a + a { border-top: 1px solid var(--card-separator-color); }
 .reading-shortcuts a:hover { background: var(--body-background); }
 .reading-shortcuts a:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; }
 @media (max-width: 767px) {
-  .reading-shortcuts { right: 12px; bottom: calc(12px + env(safe-area-inset-bottom)); }
+  .reading-shortcuts { display: flex; }
+  .sidebar-reading-item { display: none; }
 }
 // 原始接龙默认收起，复制按钮仅在脚本准备好后显示
 .checkin-raw-details { margin: 16px 0; border: 1px solid var(--card-separator-color); border-radius: 8px; }

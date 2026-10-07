@@ -1,0 +1,8 @@
+{{/* 根据当前页面模板返回阅读锚点，首页、归档及其它功能页面不启用 */}}
+{{ $enabled := in (slice "weekly" "history-summary" "group" "simple") (.Params.layout | default "") }}
+{{ $toc := "" }}
+{{ if gt (len .Fragments.Headings) 0 }}
+  {{ if eq .Params.layout "weekly" }}{{ $toc = "weekly-toc-title" }}{{ end }}
+  {{ if eq .Params.layout "history-summary" }}{{ $toc = "summary-toc-title" }}{{ end }}
+{{ end }}
+{{ return (dict "enabled" $enabled "toc" $toc) }}

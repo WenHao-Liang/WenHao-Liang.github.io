@@ -21,8 +21,8 @@
     {{ .Content }}
   </section>
   {{ partial "week-navigation.html" . }}
+  <div id="article-bottom"></div>
 </article>
-{{ partial "reading-shortcuts.html" "weekly-toc-title" }}
 {{ partial "weekly-mermaid.html" . }}
 {{ partialCached "footer/footer" . }}
 {{ end }}

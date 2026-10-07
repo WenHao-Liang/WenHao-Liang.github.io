@@ -21,7 +21,7 @@ function links(html) {
 }
 
 // 真实构建同时检查侧边、主页和归档，所有临时文件集中于仓库 tmp-for-codex
-test('文集自动收录，归档按发布日期排序且每群只出现一次', () => {
+test('文集与归档保持简洁，阅读导航只链接当前页已有锚点', () => {
     const temporaryRoot = path.join(root, 'tmp-for-codex');
     fs.mkdirSync(temporaryRoot, { recursive: true });
     const temporary = fs.mkdtempSync(path.join(temporaryRoot, 'navigation-test-'));
@@ -37,9 +37,9 @@ test('文集自动收录，归档按发布日期排序且每群只出现一次',
         writePage(content, 'post/excluded.md', '---\ntitle: 不归档文章\ndate: 2026-09-29\narchive: false\n---\n');
         writePage(content, 'new-collection/_index.md', '---\ntitle: 新增文集\ncollection: true\nweight: 40\n---\n');
         writePage(content, 'group-1/2026/20260921-20260927.md',
-            '---\ntitle: 测试周打卡\ndate: 2026-09-21\nlayout: weekly\ngroup_id: group-1\narchive: true\n---\n');
+            '---\ntitle: 测试周打卡\ndate: 2026-09-21\nlayout: weekly\ngroup_id: group-1\narchive: true\n---\n## 本周概览\n');
         writePage(content, 'group-2/summary/2026.md',
-            '---\ntitle: 测试月度汇总\ndate: 2026-10-01\nlayout: history-summary\ngroup_id: group-2\narchive: true\n---\n');
+            '---\ntitle: 测试月度汇总\ndate: 2026-10-01\nlayout: history-summary\ngroup_id: group-2\narchive: true\n---\n## 九月汇总\n');
         const build = spawnSync('hugo', ['--source', root, '--buildFuture', '--contentDir', content,
             '--destination', path.join(temporary, 'site'), '--cacheDir',
             process.env.HUGO_TEST_CACHE || path.join(root, 'tmp-for-codex/checkins-publish/cache')],
@@ -66,6 +66,23 @@ test('文集自动收录，归档按发布日期排序且每群只出现一次',
         assert.match(archiveMain, /2026-09-28/);
         assert.match(archiveMain, /2025-02-01/);
         assert.doesNotMatch(archiveMain, /2028/);
+        // 验证两种阅读导航共用本页锚点，首页和归档不产生无效按钮
+        for (const html of [home, archive]) {
+            assert.doesNotMatch(html, /aria-label="当前页面阅读导航"|aria-label="手机阅读导航"/);
+        }
+        for (const [url, toc] of [['group-1', null], ['kernel', null],
+            ['group-1/2026/20260921-20260927', 'weekly-toc-title'],
+            ['group-2/summary/2026', 'summary-toc-title']]) {
+            const html = fs.readFileSync(path.join(temporary, `site/${url}/index.html`), 'utf8');
+            for (const label of ['当前页面阅读导航', '手机阅读导航']) {
+                const nav = html.match(new RegExp(`<nav[^>]*aria-label="${label}"[^>]*>([\\s\\S]*?)<\\/nav>`));
+                assert.ok(nav, `${url} 缺少 ${label}`);
+                assert.deepEqual(links(nav[1]), ['#article-top', ...(toc ? [`#${toc}`] : []), '#article-bottom']);
+            }
+            for (const id of ['article-top', 'article-bottom', ...(toc ? [toc] : [])]) {
+                assert.equal((html.match(new RegExp(`id="${id}"`, 'g')) || []).length, 1);
+            }
+        }
         for (const group of ['group-1', 'group-2']) {
             const html = fs.readFileSync(path.join(temporary, `site/${group}/index.html`), 'utf8');
             assert.match(html, /返回文集分类/);
