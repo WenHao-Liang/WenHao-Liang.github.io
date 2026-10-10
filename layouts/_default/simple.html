@@ -6,6 +6,7 @@
     <nav aria-label="上一级页面"><a class="parent-link" href="{{ .Site.Home.RelPermalink }}">← 返回文集分类</a></nav>
     <h1 class="article-title">{{ .Title }}</h1>
     {{ partial "publication-dates.html" . }}
+    {{ partial "visit-statistics.html" (dict "page" . "kind" "page") }}
   </div></header>
   <section class="article-content">{{ .Content }}</section>
   <div id="article-bottom"></div>

@@ -1,6 +1,9 @@
 {{/* 主页按权重自动列出 collection 文集，不展开文章或打卡子页面 */}}
 {{ define "main" }}
-<header class="portal-heading"><h1>{{ .Title }}</h1></header>
+<header class="portal-heading">
+  <h1>{{ .Title }}</h1>
+  {{ partial "visit-statistics.html" (dict "page" . "kind" "page") }}
+</header>
 <section class="article-list">
 {{ range (where (where .Site.Pages "Params.collection" true) "Params.hidden" "!=" true).ByWeight }}
   <article class="main-article portal-card"><div class="article-details">
