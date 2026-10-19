@@ -4,10 +4,12 @@
 .weekly-chart-scroll { overflow-x: auto; overscroll-behavior-x: contain; max-width: 100%; border: 1px solid var(--card-separator-color); border-radius: 8px; }
 .weekly-chart-scroll:focus-visible { outline: 2px solid var(--accent-color); }
 .weekly-chart-scroll svg { max-width: none !important; display: block; }
-.weekly-chart-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 12px; }
-.weekly-chart-controls[hidden] { display: none; }
+.weekly-chart-controls { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 80px; row-gap: 10px; margin-top: 12px; }
+.weekly-chart-sort, .weekly-chart-navigation { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 100%; }
+.weekly-chart-controls[hidden], .weekly-chart-navigation[hidden] { display: none; }
 .weekly-chart-controls button { font: inherit; font-size: 14px; line-height: 1.4; min-height: 36px; padding: 8px 12px; border: 1px solid var(--card-separator-color); border-radius: 6px; background: var(--card-background); color: var(--card-text-color-main); cursor: pointer; }
 .weekly-chart-controls button:hover:not(:disabled) { border-color: var(--accent-color); color: var(--accent-color); }
+.weekly-chart-controls button[aria-pressed="true"] { border-color: var(--accent-color); color: var(--accent-color); box-shadow: inset 0 0 0 1px var(--accent-color); }
 .weekly-chart-controls button:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; }
 .weekly-chart-controls button:disabled { opacity: .4; cursor: default; }
 .weekly-chart-code { font-size: 13px; margin-top: 8px; }
@@ -17,13 +19,38 @@
 <script type="module">
 // 只读取专用图表容器，避免把原始接龙里的 Mermaid 文本当作代码执行
 const figures = [...document.querySelectorAll(".weekly-mermaid")];
+const chartStates = new WeakMap();
+
+// sortChartSource 从原始名单配对昵称与天数，仅替换坐标与数值行，并列时沿用名单顺序
+function sortChartSource(source, order) {
+  if (order === "name") return source;
+  const labelsPattern = /^([ \t]*x-axis[ \t]+)(\[[^\r\n]*\])([ \t]*)$/m;
+  const valuesPattern = /^([ \t]*bar[ \t]+)(\[[^\r\n]*\])([ \t]*)$/m;
+  const labels = source.match(labelsPattern);
+  const values = source.match(valuesPattern);
+  if (!labels || !values) throw new Error("图表缺少名单或天数");
+  const names = JSON.parse(labels[2]);
+  const days = JSON.parse(values[2]);
+  if (names.length !== days.length || !names.every(name => typeof name === "string")
+      || !days.every(value => Number.isInteger(value) && value >= 0)) {
+    throw new Error("图表名单与整数天数不匹配");
+  }
+  const indices = names.map((_, index) => index).sort((a, b) => days[b] - days[a] || a - b);
+  return source.replace(labelsPattern, (_, prefix, _data, suffix) => prefix + JSON.stringify(indices.map(index => names[index])) + suffix)
+    .replace(valuesPattern, (_, prefix, _data, suffix) => prefix + JSON.stringify(indices.map(index => days[index])) + suffix);
+}
+
 // updateChartControls 根据本图的实际溢出和滚动位置显示按钮、禁用已到达的边界
 function updateChartControls(figure) {
   const viewport = figure.querySelector(".weekly-chart-scroll");
   const controls = figure.querySelector(".weekly-chart-controls");
   const max = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
-  controls.hidden = !viewport.querySelector("svg") || max <= 1;
-  for (const button of controls.querySelectorAll("button")) {
+  controls.hidden = !viewport.querySelector("svg");
+  controls.querySelector(".weekly-chart-navigation").hidden = max <= 1;
+  for (const button of controls.querySelectorAll("button[data-chart-sort]")) {
+    button.setAttribute("aria-pressed", String(button.dataset.chartSort === chartStates.get(figure).order));
+  }
+  for (const button of controls.querySelectorAll("button[data-chart-scroll]")) {
     const left = ["start", "left"].includes(button.dataset.chartScroll);
     button.disabled = left ? viewport.scrollLeft <= 1 : viewport.scrollLeft >= max - 1;
   }
@@ -32,6 +59,7 @@ function updateChartControls(figure) {
 if (figures.length) {
   // 每张图独立移动，保留原生滚动；窗口尺寸或触摸板位置变化时同步边界状态
   figures.forEach((figure, index) => {
+    chartStates.set(figure, {order: "name", renderedOrder: "name", resetScroll: false});
     const viewport = figure.querySelector(".weekly-chart-scroll");
     const controls = figure.querySelector(".weekly-chart-controls");
     viewport.id = "weekly-chart-scroll-" + index;
@@ -55,23 +83,30 @@ if (figures.length) {
   try {
     const {default: mermaid} = await import("https://cdn.jsdelivr.net/npm/mermaid@12.0.0/dist/mermaid.esm.min.mjs");
     let revision = 0;
-    let pending = false;
+    const pending = new Set();
     let rendering = false;
-    // 串行重绘以兼容主题切换，保持滚动位置并阻止异步渲染互相覆盖
-    async function draw() {
-      if (rendering) { pending = true; return; }
+    // 排序只重绘目标图，主题切换重绘全部图；串行消费请求，后来的排序覆盖旧请求
+    async function draw(targetFigure) {
+      for (const figure of targetFigure ? [targetFigure] : figures) pending.add(figure);
+      if (rendering) return;
       rendering = true;
-      do {
-        pending = false;
+      while (pending.size) {
+        const targets = [...pending];
+        pending.clear();
         const dark = document.documentElement.dataset.scheme === "dark";
         mermaid.initialize({startOnLoad: false, securityLevel: "strict", theme: dark ? "dark" : "default"});
-        for (const [index, figure] of figures.entries()) {
+        for (const figure of targets) {
+          const index = figures.indexOf(figure);
+          const state = chartStates.get(figure);
+          const order = state.order;
           const viewport = figure.querySelector(".weekly-chart-scroll");
           const status = figure.querySelector(".weekly-chart-status");
-          const source = figure.querySelector("code").textContent;
+          const originalSource = figure.querySelector("code").textContent;
           const scroll = viewport.scrollLeft;
           try {
+            const source = sortChartSource(originalSource, order);
             const {svg} = await mermaid.render("weekly-chart-" + revision++ + "-" + index, source);
+            if (order !== state.order) continue;
             viewport.innerHTML = svg;
             const image = viewport.querySelector("svg");
             // 打卡按整天统计，去掉 Mermaid 自动插入的小数刻度和对应短线
@@ -92,21 +127,39 @@ if (figures.length) {
             image.setAttribute("viewBox", [box.x - 16, box.y - 24, box.width + 32, box.height + 40].join(" "));
             image.style.width = image.viewBox.baseVal.width + "px";
             image.style.height = image.viewBox.baseVal.height + "px";
-            viewport.scrollLeft = scroll;
+            viewport.scrollLeft = state.resetScroll ? 0 : scroll;
+            state.resetScroll = false;
+            state.renderedOrder = order;
             updateChartControls(figure);
             status.hidden = true;
           } catch (error) {
+            if (order !== state.order) continue;
+            state.order = state.renderedOrder;
+            state.resetScroll = false;
+            updateChartControls(figure);
             status.textContent = "图表渲染失败，请展开源码查看数据。";
             status.hidden = false;
             figure.querySelector("details").open = true;
             console.error(error);
           }
         }
-      } while (pending);
+      }
       rendering = false;
     }
+    // 排序状态仅保存在当前页面，不改写 Markdown 或展开区中的原始图表源码
+    for (const figure of figures) {
+      figure.querySelector(".weekly-chart-sort").addEventListener("click", event => {
+        const button = event.target.closest("button[data-chart-sort]");
+        const state = chartStates.get(figure);
+        if (!button || state.order === button.dataset.chartSort) return;
+        state.order = button.dataset.chartSort;
+        state.resetScroll = true;
+        updateChartControls(figure);
+        void draw(figure);
+      });
+    }
     await draw();
-    new MutationObserver(draw).observe(document.documentElement, {attributes: true, attributeFilter: ["data-scheme"]});
+    new MutationObserver(() => draw()).observe(document.documentElement, {attributes: true, attributeFilter: ["data-scheme"]});
   } catch (error) {
     for (const figure of figures) {
       figure.querySelector(".weekly-chart-status").textContent = "图表组件加载失败，请展开源码查看数据。";
