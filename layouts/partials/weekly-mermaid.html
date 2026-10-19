@@ -4,6 +4,12 @@
 .weekly-chart-scroll { overflow-x: auto; overscroll-behavior-x: contain; max-width: 100%; border: 1px solid var(--card-separator-color); border-radius: 8px; }
 .weekly-chart-scroll:focus-visible { outline: 2px solid var(--accent-color); }
 .weekly-chart-scroll svg { max-width: none !important; display: block; }
+.weekly-chart-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 12px; }
+.weekly-chart-controls[hidden] { display: none; }
+.weekly-chart-controls button { font: inherit; font-size: 14px; line-height: 1.4; min-height: 36px; padding: 8px 12px; border: 1px solid var(--card-separator-color); border-radius: 6px; background: var(--card-background); color: var(--card-text-color-main); cursor: pointer; }
+.weekly-chart-controls button:hover:not(:disabled) { border-color: var(--accent-color); color: var(--accent-color); }
+.weekly-chart-controls button:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; }
+.weekly-chart-controls button:disabled { opacity: .4; cursor: default; }
 .weekly-chart-code { font-size: 13px; margin-top: 8px; }
 .weekly-chart-code pre { max-height: 240px; overflow: auto; }
 .weekly-chart-status { font-size: 14px; }
@@ -11,7 +17,41 @@
 <script type="module">
 // 只读取专用图表容器，避免把原始接龙里的 Mermaid 文本当作代码执行
 const figures = [...document.querySelectorAll(".weekly-mermaid")];
+// updateChartControls 根据本图的实际溢出和滚动位置显示按钮、禁用已到达的边界
+function updateChartControls(figure) {
+  const viewport = figure.querySelector(".weekly-chart-scroll");
+  const controls = figure.querySelector(".weekly-chart-controls");
+  const max = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+  controls.hidden = !viewport.querySelector("svg") || max <= 1;
+  for (const button of controls.querySelectorAll("button")) {
+    const left = ["start", "left"].includes(button.dataset.chartScroll);
+    button.disabled = left ? viewport.scrollLeft <= 1 : viewport.scrollLeft >= max - 1;
+  }
+}
+
 if (figures.length) {
+  // 每张图独立移动，保留原生滚动；窗口尺寸或触摸板位置变化时同步边界状态
+  figures.forEach((figure, index) => {
+    const viewport = figure.querySelector(".weekly-chart-scroll");
+    const controls = figure.querySelector(".weekly-chart-controls");
+    viewport.id = "weekly-chart-scroll-" + index;
+    controls.querySelectorAll("button").forEach(button => button.setAttribute("aria-controls", viewport.id));
+    controls.addEventListener("click", event => {
+      const button = event.target.closest("button[data-chart-scroll]");
+      if (!button || button.disabled) return;
+      const max = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+      const action = button.dataset.chartScroll;
+      const step = viewport.clientWidth * .8;
+      const target = action === "start" ? 0 : action === "end" ? max
+        : viewport.scrollLeft + (action === "left" ? -step : step);
+      viewport.scrollTo({
+        left: Math.max(0, Math.min(max, target)),
+        behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"
+      });
+    });
+    viewport.addEventListener("scroll", () => updateChartControls(figure), {passive: true});
+    new ResizeObserver(() => updateChartControls(figure)).observe(viewport);
+  });
   try {
     const {default: mermaid} = await import("https://cdn.jsdelivr.net/npm/mermaid@12.0.0/dist/mermaid.esm.min.mjs");
     let revision = 0;
@@ -53,6 +93,7 @@ if (figures.length) {
             image.style.width = image.viewBox.baseVal.width + "px";
             image.style.height = image.viewBox.baseVal.height + "px";
             viewport.scrollLeft = scroll;
+            updateChartControls(figure);
             status.hidden = true;
           } catch (error) {
             status.textContent = "图表渲染失败，请展开源码查看数据。";
