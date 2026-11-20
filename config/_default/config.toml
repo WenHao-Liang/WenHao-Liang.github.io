@@ -1,6 +1,7 @@
 # Change baseurl before deploy
 baseurl = "https://WenHao-Liang.github.io/"
 languageCode = "zh-cn"
+timeZone = "Asia/Shanghai"
 title = "WenHao-Liang's Blogs"
 
 # Theme i18n support
